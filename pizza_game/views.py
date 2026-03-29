@@ -15,7 +15,7 @@ def pizza_game(request):
     ]
 
     result = None
-    score = get_score(request)
+    score = get_score()
 
     if request.method == "POST":
         message, points = random.choice(messages)

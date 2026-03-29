@@ -13,7 +13,8 @@ Click the **"Make Pizza 🍕"** button and get a random result:
 * 😂 Chef ate it (0)
 
 Your score increases as you play!
-Your score inittally = 0 and saved in /data/score.txt
+Your score inittally = 0 and saved in "~/tmp/data_score"
+
 
 
 ## 🚀 How to Run
@@ -56,4 +57,9 @@ http://127.0.0.1:8000/
 ## Enviroment Variables 
 ```
 BACKGROUND_COLOR --> default "#A98B76"
+```
+
+## Data Directory 
+```
+~/tmp/data_score
 ```
