@@ -10,8 +10,8 @@ def pizza_game(request):
         ("Perfect Pizza 🍕", 1),
         ("Awesome Pizza 😋😍🍕", 2),
         ("Burnt Pizza 🔥", -1),
-        ("Dog stole it 🐶", 0),
-        ("Chef ate it 😂", 0),
+        ("Dog stole it 🐶", -2),
+        ("Chef ate it 😂", 0)
     ]
 
     result = None

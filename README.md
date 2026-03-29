@@ -8,9 +8,9 @@ Click the **"Make Pizza 🍕"** button and get a random result:
 
 * 🍕 Awesome Pizza 😋😍🍕 (+2)
 * 🍕 Perfect Pizza (+1)
-* 🔥 Burnt Pizza (-1)
-* 🐶 Dog stole it (0)
 * 😂 Chef ate it (0)
+* 🔥 Burnt Pizza (-1)
+* 🐶 Dog stole it (-2)
 
 Your score increases as you play!
 Your score inittally = 0 and saved in "~/tmp/data_score"
