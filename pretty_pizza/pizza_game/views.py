@@ -21,8 +21,10 @@ def pizza_game(request):
         request.session['score'] = score
 
         result = message
+    back_ground_color = "yello"
 
     return render(request, "pizza_game/pizza.html", {
         "result": result,
-        "score": score
+        "score": score,
+        "background_color": back_ground_color
     })
