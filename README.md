@@ -16,27 +16,17 @@ Your score increases as you play!
 
 ## 🚀 How to Run
 
-### 1️⃣ Create Virtual Environment
+
+### 1️⃣ change Directory to be inside the app folder 
 
 ```bash
-python -m venv venv
+cd  pretty-pizza/
 ```
-
-### 2️⃣ Activate Virtual Environment
-
-**Mac/Linux**
+### 2️⃣ upgrade pip 
 
 ```bash
-source venv/bin/activate
+pip install --upgrade pip
 ```
-
-**Windows**
-
-```bash
-venv\Scripts\activate
-```
-
----
 
 ### 3️⃣ Install Dependencies
 
@@ -44,20 +34,16 @@ venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
----
-
 ### 4️⃣ Run Migrations
 
 ```bash
 python manage.py migrate
 ```
 
----
-
 ### 5️⃣ Run Server
 
 ```bash
-python manage.py runserver
+python manage.py runserver 0.0.0.0:8000
 ```
 
 Open your browser:

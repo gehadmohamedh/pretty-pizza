@@ -3,24 +3,20 @@
 <head>
     <title>Pretty Pizza 🍕</title>
 </head>
-<style>
-    body {
-        background-color: #dccd91;
-    }
-</style>
-<body style="text-align:center; font-family:sans-serif;">
+<body style="text-align:center; font-family:sans-serif; background-color: {{ background_color }} ">
 
-    <h1>🍕 Pretty Pizza Game 🍕</h1>
-
-    <h2>Score: {{ score }}</h2>
+    <h1 style="color: #F3E4C9">🍕 Pretty Pizza Game 🍕</h1>
+    <div style="margin-top: 100px;">
+    <h2 style="color: #BABF94" >Score: {{ score }}</h2>
 
     {% if result %}
-        <h3>{{ result }}</h3>
+        <h3 style="color: #6f7b15">{{ result }}</h3>
     {% endif %}
+    </div>
 
     <form method="post">
         {% csrf_token %}
-        <button type="submit" style="padding:10px 20px; font-size:20px;">
+        <button type="submit" style="padding:10px 20px; font-size:20px; background-color:rgb(151, 75, 24)">
             Make Pizza 🍕
         </button>
     </form>

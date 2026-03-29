@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from django.conf import settings
 # Create your views here.
 import random
 from django.shortcuts import render
@@ -7,6 +7,7 @@ from django.shortcuts import render
 def pizza_game(request):
     messages = [
         ("Perfect Pizza 🍕", 1),
+        ("Awesome Pizza 😋😍🍕", 2),
         ("Burnt Pizza 🔥", -1),
         ("Dog stole it 🐶", 0),
         ("Chef ate it 😂", 0),
@@ -21,10 +22,9 @@ def pizza_game(request):
         request.session['score'] = score
 
         result = message
-    back_ground_color = "yello"
 
     return render(request, "pizza_game/pizza.html", {
         "result": result,
         "score": score,
-        "background_color": back_ground_color
+        "background_color": settings.BACKGROUND_COLOR
     })
