@@ -51,3 +51,7 @@ Open your browser:
 ```
 http://127.0.0.1:8000/
 ```
+## Enviroment Variables 
+```
+BACKGROUND_COLOR --> default "#A98B76"
+```
