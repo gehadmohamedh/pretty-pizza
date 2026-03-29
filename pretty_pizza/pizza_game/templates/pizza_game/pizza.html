@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pretty Pizza 🍕</title>
+</head>
+<style>
+    body {
+        background-color: #dccd91;
+    }
+</style>
+<body style="text-align:center; font-family:sans-serif;">
+
+    <h1>🍕 Pretty Pizza Game 🍕</h1>
+
+    <h2>Score: {{ score }}</h2>
+
+    {% if result %}
+        <h3>{{ result }}</h3>
+    {% endif %}
+
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" style="padding:10px 20px; font-size:20px;">
+            Make Pizza 🍕
+        </button>
+    </form>
+
+</body>
+</html>
