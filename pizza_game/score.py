@@ -1,6 +1,6 @@
 import os 
 
-BASE_DIR = os.path.expanduser("~/tmp/data_score")
+BASE_DIR = os.path.expanduser("~/tmp")
 
 def save_score(score):
     os.makedirs(BASE_DIR, exist_ok=True)
