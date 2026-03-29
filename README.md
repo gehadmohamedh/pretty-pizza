@@ -6,12 +6,14 @@ A super simple and funny Django game built to demonstrate how web apps can be co
 
 Click the **"Make Pizza 🍕"** button and get a random result:
 
+* 🍕 Awesome Pizza 😋😍🍕 (+2)
 * 🍕 Perfect Pizza (+1)
 * 🔥 Burnt Pizza (-1)
 * 🐶 Dog stole it (0)
 * 😂 Chef ate it (0)
 
 Your score increases as you play!
+Your score inittally = 0 and saved in /data/score.txt
 
 
 ## 🚀 How to Run

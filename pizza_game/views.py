@@ -3,6 +3,7 @@ from django.conf import settings
 # Create your views here.
 import random
 from django.shortcuts import render
+from .score import save_score, get_score
 
 def pizza_game(request):
     messages = [
@@ -14,13 +15,12 @@ def pizza_game(request):
     ]
 
     result = None
-    score = request.session.get('score', 0)
+    score = get_score(request)
 
     if request.method == "POST":
         message, points = random.choice(messages)
         score += points
-        request.session['score'] = score
-
+        save_score(score)
         result = message
 
     return render(request, "pizza_game/pizza.html", {
