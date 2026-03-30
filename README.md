@@ -43,7 +43,7 @@ pip install -r requirements.txt
 python manage.py migrate
 ```
 
-### 5️⃣ Run Server
+### 5️⃣ Run Server on port 8000
 
 ```bash
 python manage.py runserver 0.0.0.0:8000
