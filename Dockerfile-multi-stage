@@ -1,0 +1,34 @@
+# Stage 1: Builder
+FROM python:3.14-slim AS builder
+
+WORKDIR /app
+
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    && rm -rf /var/lib/apt/lists/*
+
+COPY requirements.txt .
+
+RUN pip install --upgrade pip && \
+    pip install --prefix=/install -r requirements.txt
+
+
+# Stage 2: Production
+FROM python:3.14-slim
+
+RUN useradd -m appuser
+
+WORKDIR /app
+
+# Copy dependencies
+COPY --from=builder /install /usr/local
+RUN mkdir /app/data && chown -R appuser:appuser /app/data
+
+# Copy app
+COPY --chown=appuser:appuser . .
+
+USER appuser
+
+EXPOSE 8000
+
+CMD ["gunicorn", "--bind", "0.0.0.0:8000", "--workers", "3", "pretty_pizza.wsgi:application"]

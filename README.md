@@ -61,5 +61,5 @@ BACKGROUND_COLOR --> default "#A98B76"
 
 ## Data Directory 
 ```
-/tmp
+/app/data
 ```
